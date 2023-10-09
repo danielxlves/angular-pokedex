@@ -1,0 +1,29 @@
+
+<div class="container">
+
+  <h1>
+    Pesquise seu pokemon favorito.
+  </h1>
+
+  <div>
+    <input type="text" (input)="getPokemon($any($event.target).value)">
+  </div>
+
+  <div class="container__pokemon">
+
+    <div class="name__pokemon">
+      <h3>{{pokemon.name}}</h3>
+    </div>
+
+    <div class="photo__pokemon">
+      <img [src]="pokemon.sprites.front_default" alt="">
+    </div>
+
+    <div class="type__pokemon">
+      <div class="attributes__pokemon" *ngFor="let types of pokemon.types" > {{types.type.name}} </div>
+    </div>
+
+  </div>
+
+</div>
+
